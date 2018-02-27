@@ -27,7 +27,7 @@ import move.Move;
 /**
  * bot.BotParser - Created on 15-2-18
  *
- * Main class that will keep reading output from the engine.
+ * Class that will keep reading output from the engine.
  * Will either update the bot state or get actions.
  *
  * @author Jim van Eeden - jim@riddles.io
