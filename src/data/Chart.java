@@ -62,12 +62,18 @@ public class Chart {
      */
     public double SMA(int amount, Date currentDate, int interval) {
         double sum = 0;
+        int count = 0;
 
         for (int i = 0; i < amount; i++) {
             Date date = new Date(currentDate.getTime() - (interval * i));  // Previous candle
-            sum += getCandleAt(date).getClose();  // Sums closing price of candle
+            Candle candle = getCandleAt(date);
+
+            if (candle != null) {
+                sum += getCandleAt(date).getClose();  // Sums closing price of candle
+                count++;
+            }
         }
 
-        return sum / amount;
+        return sum / count;
     }
 }

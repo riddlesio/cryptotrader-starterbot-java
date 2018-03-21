@@ -44,6 +44,7 @@ public class BotState {
     private int CANDLES_GIVEN;
     private int INITIAL_STACK;
     private String[] CANDLE_FORMAT;
+    private double TRANSACTION_FEE;
 
     // Variables (from updates)
     private int timebank;
@@ -105,6 +106,10 @@ public class BotState {
         CANDLE_FORMAT = value;
     }
 
+    public void setTransactionFee(double value) {
+        TRANSACTION_FEE = value;
+    }
+
     public HashMap<String, Chart> getCharts() {
         return this.charts;
     }
@@ -147,5 +152,9 @@ public class BotState {
 
     public String[] getCandleFormat() {
         return CANDLE_FORMAT;
+    }
+
+    public double getTransactionFee() {
+        return TRANSACTION_FEE;
     }
 }

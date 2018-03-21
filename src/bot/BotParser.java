@@ -110,6 +110,9 @@ public class BotParser {
                 case "initial_stack":
                     this.currentState.setInitialStack(Integer.parseInt(value));
                     break;
+                case "transaction_fee_percent":
+                    this.currentState.setTransactionFee(Double.parseDouble(value));
+                    break;
                 default:
                     System.err.println(String.format(
                             "Cannot parse settings input with key '%s'", key));
